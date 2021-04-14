@@ -3,7 +3,7 @@ An _IfcSweptSurface_ is a surface defined by sweeping a curve. The swept surface
 * The swept curve is defined by positioning the profile in the xy plane of the object coordinate system, 
 * The sweeping operation is applied to the swept curve as defined within the subtypes of _IfcSweptSurface_;
 
-The optional _Positio_n coordinate system allows for re-positioning the resulting swept surface relative to the object coordinate system.
+The optional _Position_ coordinate system allows for re-positioning the resulting swept surface relative to the object coordinate system.
 
 { .extDef}
 > NOTE&nbsp; Definition according to ISO/CD 10303-42:1992  

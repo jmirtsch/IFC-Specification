@@ -4,7 +4,7 @@
 		<DocLocalization Locale="en" Name="Sectioned Solid Horizontal" />
 	</Localization>
 	<Attributes>
-		<DocAttribute Name="CrossSectionPositions" UniqueId="3fcd980f-6728-4b2a-aab9-9fd4b2b292e9" DefinedType="IfcCurveMeasureSelect" AggregationType="1" AggregationLower="2" AggregationUpper="?">
+		<DocAttribute Name="CrossSectionPositions" UniqueId="3fcd980f-6728-4b2a-aab9-9fd4b2b292e9" DefinedType="IfcAxis2PlacementLinear" AggregationType="1" AggregationLower="2" AggregationUpper="?">
 			<Documentation>List of distance expressions in sequentially increasing order paired with _CrossSections_, indicating the position of the corresponding section along the _Directrix_.</Documentation>
 		</DocAttribute>
 		<DocAttribute Name="FixedAxisVertical" UniqueId="d23af836-5a9f-459e-9951-80823ea30043" DefinedType="IfcBoolean">
@@ -18,7 +18,7 @@
 		</DocWhereRule>
 		<DocWhereRule Name="NoLongitudinalOffsets" UniqueId="05b295a8-2adf-47ae-b578-1fb527aaba25">
 			<Documentation>Distance expressions must not use longitudinal offsets.</Documentation>
-			<Expression>SIZEOF(QUERY(temp &lt;* CrossSectionPositions | EXISTS(temp.OffsetLongitudinal))) = 0</Expression>
+			<Expression>SIZEOF(QUERY(temp &lt;* CrossSectionPositions | EXISTS(temp.Location.OffsetLongitudinal))) = 0</Expression>
 		</DocWhereRule>
 	</WhereRules>
 </DocEntity>

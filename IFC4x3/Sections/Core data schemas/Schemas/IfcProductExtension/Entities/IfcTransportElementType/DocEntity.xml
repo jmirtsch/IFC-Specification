@@ -13,8 +13,15 @@
 	<WhereRules>
 		<DocWhereRule Name="CorrectPredefinedType" UniqueId="501115f8-7ae2-4429-b433-6fecf90a3c8c">
 			<Documentation>The inherited attribute _ElementType_ shall be provided, if the _PredefinedType_ is set to USERDEFINED.</Documentation>
-			<Expression>((PredefinedType &lt;&gt; IfcTransportElementFixedTypeEnum.USERDEFINED) AND (PredefinedType &lt;&gt; IfcTransportElementNonFixedTypeEnum.USERDEFINED)) OR
-(((PredefinedType = IfcTransportElementFixedTypeEnum.USERDEFINED) OR (PredefinedType = IfcTransportElementNonFixedTypeEnum.USERDEFINED)) AND EXISTS(SELF\IfcElementType.ElementType))</Expression>
+			<Expression>((PredefinedType &lt;&gt; IfcTransportElementFixedTypeEnum.USERDEFINED)
+AND
+(PredefinedType &lt;&gt; IfcTransportElementNonFixedTypeEnum.USERDEFINED))
+OR
+((PredefinedType = IfcTransportElementFixedTypeEnum.USERDEFINED)
+OR
+(PredefinedType = IfcTransportElementNonFixedTypeEnum.USERDEFINED)
+AND
+EXISTS(SELF\IfcElementType.ElementType))</Expression>
 		</DocWhereRule>
 	</WhereRules>
 </DocEntity>
